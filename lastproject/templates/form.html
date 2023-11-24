@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FORM</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+<h3>Form</h3>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+    <input type="text" name="name" placeholder="Enter your name"><br>
+    <input type="date" name="DOB" placeholder="Enter your DOB"><br>
+    <input type="text" name="age" placeholder="Enter your age"><br>
+    <input type="radio" name="male">Male<br>
+    <input type="radio" name="female">Female<br>
+    <input type="text" name="Phonenumber" placeholder="Enter your phonenumber"><br>
+    <input type="email" name="email" placeholder="Enter your Email"><br>
+    <textarea name="address" cols="30" rows="3" placeholder="Enter your address"></textarea><br>
+       <label for="Department">Department</label>
+         <select id="Department" name="Department">
+              <option value="Computer Science">Computer Science</option>
+              <option value="Commerce">Commerce</option>
+              <option value="Biochemistry">Biochemistry</option>
+              <option value="Mathematics">Mathematics</option>
+              <option value="Botany">Botany</option>
+         </select><br>
+<label for="Courses">COURSES</label>
+    <select name="Courses" id="coures" class="browser-default" required="">
+      <optgroup label="ComputerScience">
+        <option value="31">Java</option>
+        <option value="32">Computer Programming</option>
+        <option value="33">Python</option>
+      </optgroup>
+      <optgroup label="Commerce">
+        <option value="47">Accoutancy</option>
+        <option value="48">BCom</option>
+        <option value="48">Business administration</option>
+      </optgroup>
+      <optgroup label="Biochemistry">
+        <option value="47">Cell biology</option>
+        <option value="48">Biomolecules</option>
+        <option value="48">Biological Science</option>
+      </optgroup>
+      <optgroup label="Mathemathics">
+        <option value="47">Pure mathematics</option>
+        <option value="48">Applied mathematics</option>
+        <option value="48">Algebra</option>
+      </optgroup>
+      <optgroup label="Botany">
+        <option value="47">Plant ecology</option>
+        <option value="48">Microbiology</option>
+        <option value="48">Fungi</option>
+      </optgroup>
+    </select><br>
+    <label for="Purpose">Purpose</label>
+    <select name="Purpose" id="Pur">
+              <option value="Enquiry">Enquiry</option>
+              <option value="Place">Place Order</option>
+              <option value="Return">Return</option>
+    </select><br>
+
+    <fieldset>
+        <legend>Materials provide</legend>
+        <div>
+            <input type="checkbox" id="Note Book" name="Note Book" checked/>
+            <label for="Note Book">Note Book</label>
+        </div>
+         <div>
+            <input type="checkbox" id="Pen" name="Pen" checked/>
+            <label for="Pen">Pen</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Exam paper" name="Exam paper" checked/>
+            <label for="Exam paper">Exam paper</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Record" name="Record" checked/>
+            <label for="Record">Record</label>
+        </div>
+        <div>
+            <input type="checkbox" id="Others" name="Others" checked/>
+            <label for="Others">Others</label>
+        </div>
+    </fieldset>
+        <input type="submit"><br><br>
+        <div class="btn btn-primary">Logout</div>
+</form>
+</body>
+</html>
